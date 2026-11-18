@@ -98,6 +98,8 @@ schema.sql               D1 结构（首次请求自动执行）
 
 ## 许可
 
-MIT。上游 [prain.cn](https://prain.cn) 的版权声明保留在 [LICENSE](LICENSE)。
+**GPL-3.0**（GNU General Public License v3.0），全文见 [LICENSE](LICENSE)。
+
+本项目是 [prain.cn](https://prain.cn) 1.3.4 的衍生作品。上游采用 MIT 许可，其版权与许可声明保留在 [NOTICE](NOTICE) 中；MIT 部分仍可按 MIT 使用，整体以 GPL-3.0 分发。
 
 主题、扩展与 `public/` 下的静态资源版权归原作者所有。
