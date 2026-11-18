@@ -1,0 +1,19 @@
+{
+  "name": "prain-worker",
+  "version": "1.3.4",
+  "private": true,
+  "description": "Prain 清雨博客 1.3.4 · Cloudflare Workers 单站移植版（D1 + KV）",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "db:local": "wrangler d1 execute prain --local --file=schema.sql",
+    "db:remote": "wrangler d1 execute prain --remote --file=schema.sql",
+    "migrate": "node scripts/migrate-php.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261113.1",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.0.0"
+  }
+}

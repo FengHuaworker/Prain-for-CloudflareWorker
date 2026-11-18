@@ -1,0 +1,31 @@
+# Prain 清雨博客 · Cloudflare Workers 单站版
+# 填好 D1 / KV 的 ID 后执行 npm run deploy
+
+name = "prain-worker"
+main = "src/index.ts"
+compatibility_date = "2025-05-01"
+workers_dev = true
+
+# 静态资源：命中 public/ 的文件直接由 Assets 返回，不计 Worker 请求
+assets = { directory = "public", binding = "ASSETS", run_worker_first = false }
+
+# 模板以文本模块打包
+[[rules]]
+type = "Text"
+globs = ["**/*.html", "**/*.sql"]
+fallthrough = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "prain"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+[vars]
+PRAIN_ENV = "worker"
+
+[observability]
+enabled = true
