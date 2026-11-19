@@ -8,6 +8,12 @@
 
 ![首页](docs/screenshot.png)
 
+## 在线演示
+
+https://prainblog.yerinblog.cc.cd
+
+> 演示站只开放前台浏览，后台入口对访客返回 404。
+
 ## 功能
 
 | 模块 | 原版 | 本移植 |
